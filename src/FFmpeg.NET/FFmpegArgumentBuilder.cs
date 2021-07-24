@@ -113,7 +113,7 @@ namespace FFmpeg.NET
             if (conversionOptions.BaselineProfile)
                 commandBuilder.Append(" -profile:v baseline ");
 
-            return commandBuilder.AppendFormat(" \"{0}\" ", outputFile.FileInfo.FullName).ToString();
+            return commandBuilder.AppendFormat(" {0} \"{1}\" ", conversionOptions.CustomSettings, outputFile.FileInfo.FullName).ToString();
         }
 
         private static StringBuilder AppendVideoCropping(StringBuilder commandBuilder, ConversionOptions conversionOptions)

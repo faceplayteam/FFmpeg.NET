@@ -100,5 +100,10 @@ namespace FFmpeg.NET
             Seek = seekToPosition;
             MaxVideoDuration = length;
         }
+
+        /// <summary>
+        ///     Custom settings to use more features freely
+        /// </summary>
+        public string CustomSettings;
     }
 }
